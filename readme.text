@@ -1,0 +1,55 @@
+eLibraryProject/
+│
+├── app/                        # Application-related files
+│   ├── controllers/            # Controllers handle user requests, business logic
+│   │   ├── AuthController.php  # Handles user authentication (login, registration)
+│   │   ├── BookController.php  # Handles book-related actions (add, edit, delete, search)
+│   │   ├── UserController.php  # Manages user profiles (view, update, manage roles)
+│   │   ├── AdminController.php # Admin-specific functions (manage users, categories)
+│   │   └── RequestController.php# Handles book requests (approve/reject requests)
+│   │
+│   ├── models/                 # Models represent the data and the database structure
+│   │   ├── User.php            # User model for interacting with the users table
+│   │   ├── Book.php            # Book model for interacting with the books table
+│   │   ├── Category.php        # Category model for interacting with the categories table
+│   │   ├── Request.php         # Request model for interacting with the book requests table
+│   │   └── Log.php             # Log model for interacting with the logs table
+│   │
+│   ├── views/                  # Views (templates) for rendering HTML content
+│   │   ├── auth/               # Views for authentication pages (login, register, reset password)
+│   │   │   ├── login.php       # Login page
+│   │   │   └── register.php    # Registration page
+│   │   ├── admin/              # Admin views (dashboard, user management, etc.)
+│   │   │   └── dashboard.php   # Admin dashboard
+│   │   ├── student/            # Student views (profile, book list, etc.)
+│   │   │   ├── profile.php     # Student profile page
+│   │   │   └── book_list.php   # Book listing for students
+│   │   └── common/             # Shared views (header, footer, sidebar, etc.)
+│   │       ├── header.php      # Site header
+│   │       └── footer.php      # Site footer
+│   │
+│   ├── core/                   # Core components for routing, database, etc.
+│   │   ├── Database.php        # Handles database connection and queries
+│   │   ├── Router.php          # URL routing and controller method mapping
+│   │   ├── Controller.php      # Base controller with common logic
+│   │   └── View.php            # Loads views dynamically
+│   │
+│   └── config/                 # Configuration files
+│       ├── config.php          # General configuration settings (site URL, email, etc.)
+│       └── database.php        # Database configuration (hostname, username, password, dbname)
+│
+├── public/                     # Publicly accessible files (web root)
+│   ├── index.php               # Main entry point for the application (router)
+│   ├── .htaccess               # URL rewriting rules for clean URLs
+│   ├── assets/                 # Static assets like CSS, JS, images
+│   │   ├── css/                # CSS stylesheets
+│   │   ├── js/                 # JavaScript files
+│   │   └── img/                # Image files (e.g., logo, book covers)
+│   └── uploads/                # Uploaded files (profile photos, book files, etc.)
+│
+├── storage/                    # Application-related storage files (logs, cache, etc.)
+│   ├── logs/                   # Application log files
+│   └── cache/                  # Caching data
+│
+└── vendor/                     # Composer dependencies
+    └── autoload.php            # Composer's autoloader
